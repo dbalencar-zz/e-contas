@@ -8,6 +8,9 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'e-Contas',
+		
+	'sourceLanguage'=>'en_us',
+	'language'=>'pt_br',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -79,6 +82,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'douglas.alencar@policiacivil.am.gov.br',
 	),
 );
