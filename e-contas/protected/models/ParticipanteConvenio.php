@@ -104,14 +104,14 @@ class ParticipanteConvenio extends CActiveRecord
 			'dt_CertidaoIPESC' => 'Data IPESC',
 			'dt_ValidadeCertidaoIPESC' => 'Validade IPESC',
 			'nu_CertidaoFazendaMunicipal' => 'Certidão da Fazenda Municipal',
-			'dt_CertidaoFazendaMunicipal' => 'Data da Certidão da Fazenda Municipal',
-			'dt_ValidadeFazendaMunicipal' => 'Validade da Certidão da Fazenda Municipal',
+			'dt_CertidaoFazendaMunicipal' => 'Data Fazenda Municipal',
+			'dt_ValidadeFazendaMunicipal' => 'Validade Fazenda Municipal',
 			'nu_CertidaoFazendaFederal' => 'Certidão da Fazenda Federal',
-			'dt_CertidaoFazendaFederal' => 'Data da Certidão da Fazenda Federal',
-			'dt_ValidadeFazendaFederal' => 'Validade da Certidão da Fazenda Federal',
+			'dt_CertidaoFazendaFederal' => 'Data Fazenda Federal',
+			'dt_ValidadeFazendaFederal' => 'Validade Fazenda Federal',
 			'nu_CertidaoOutras' => 'Outra Certidão',
-			'dt_CertidaoOutras' => 'Data da Outra Certidão',
-			'dt_ValidadeCertidaoOutras' => 'Validade da Outra Certidão',
+			'dt_CertidaoOutras' => 'Data Outra Certidão',
+			'dt_ValidadeCertidaoOutras' => 'Validade Outra Certidão',
 		);
 	}
 
@@ -163,22 +163,22 @@ class ParticipanteConvenio extends CActiveRecord
 		$formatado.=str_pad($this->nm_Participante, 50, chr(32), STR_PAD_RIGHT);
 		$formatado.=str_pad($this->formataValor($this->vl_Participacao), 16, '0', STR_PAD_LEFT);
 		$formatado.=str_pad($this->vl_PercentualParticipacao, 7, '0', STR_PAD_LEFT);
-		$formatado.=str_pad($this->nu_CertidaoCASAN, 16, '0', STR_PAD_RIGHT);
+		$formatado.=str_pad($this->nu_CertidaoCASAN, 16, '0', STR_PAD_LEFT);
 		$formatado.=$this->formataData($this->dt_CertidaoCASAN);
 		$formatado.=$this->formataData($this->dt_ValidadeCertidaoCASAN);
-		$formatado.=str_pad($this->nu_CertidaoCELESC, 16, '0', STR_PAD_RIGHT);
+		$formatado.=str_pad($this->nu_CertidaoCELESC, 16, '0', STR_PAD_LEFT);
 		$formatado.=$this->formataData($this->dt_CertidaoCELESC);
 		$formatado.=$this->formataData($this->dt_ValidadeCertidaoCELESC);
-		$formatado.=str_pad($this->nu_CertidaoIPESC, 16, '0', STR_PAD_RIGHT);
+		$formatado.=str_pad($this->nu_CertidaoIPESC, 16, '0', STR_PAD_LEFT);
 		$formatado.=$this->formataData($this->dt_CertidaoIPESC);
 		$formatado.=$this->formataData($this->dt_ValidadeCertidaoIPESC);
-		$formatado.=str_pad($this->nu_CertidaoFazendaMunicipal, 16, '0', STR_PAD_RIGHT);
+		$formatado.=str_pad($this->nu_CertidaoFazendaMunicipal, 16, '0', STR_PAD_LEFT);
 		$formatado.=$this->formataData($this->dt_CertidaoFazendaMunicipal);
 		$formatado.=$this->formataData($this->dt_ValidadeFazendaMunicipal);
-		$formatado.=str_pad($this->nu_CertidaoFazendaFederal, 16, '0', STR_PAD_RIGHT);
+		$formatado.=str_pad($this->nu_CertidaoFazendaFederal, 16, '0', STR_PAD_LEFT);
 		$formatado.=$this->formataData($this->dt_CertidaoFazendaFederal);
 		$formatado.=$this->formataData($this->dt_ValidadeFazendaFederal);
-		$formatado.=str_pad($this->nu_CertidaoOutras, 16, '0', STR_PAD_RIGHT);
+		$formatado.=str_pad($this->nu_CertidaoOutras, 16, '0', STR_PAD_LEFT);
 		$formatado.=$this->formataData($this->dt_CertidaoOutras);
 		$formatado.=$this->formataData($this->dt_ValidadeCertidaoOutras);
 		$formatado.=str_pad($this->convenio->nu_Convenio, 16, chr(32), STR_PAD_RIGHT);
