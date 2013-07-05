@@ -1,14 +1,14 @@
 <?php
-/* @var $this ConvenioController */
-/* @var $model Convenio */
+/* @var $this LicitacaoController */
+/* @var $model Licitacao */
 
 $this->breadcrumbs=array(
-	'Convênios'=>array('admin'),
-	$model->nu_Convenio,
+	'Licitações'=>array('admin'),
+	$model->nu_ProcessoLicitatorio,
 );
 
 $this->menu=array(
-	array('label'=>'Participantes', 'url'=>array('/participanteConvenio/admin','convenio'=>$model->id)),
+	array('label'=>'Itens', 'url'=>array('/item/admin','licitacao'=>$model->id)),
 	array('label'=>'Adicionar', 'url'=>array('create')),
 	array('label'=>'Editar', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Excluir', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Deseja realmente excluir este item?')),
@@ -19,18 +19,13 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'esfera.descricao',
-		'recebeValorText',
-		'nu_Convenio',
-		'vl_Convenio',
-		'moeda.descricao',
-		'dt_AssinaturaConvenio',
-		'de_ObjetivoConvenio',
-		'dt_VencimentoConvenio',
-		'nu_LeiAutorizativa',
-		'dt_LeiAutorizativa',
+		'nu_ProcessoLicitatorio',
 		'nu_DiarioOficial',
-		'dt_PublicacaoConvenio',
-		'tipo.descricao',
+		'dt_PublicacaoEdital',
+		'modalidade.descricao',
+		'de_ObjetoLicitacao',
+		'vl_TotalPrevisto',
+		'nu_Edital',
+		'tipoLicitacaoText',
 	),
 )); ?>
