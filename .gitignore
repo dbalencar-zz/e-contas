@@ -1,3 +1,4 @@
 e-contas/assets/*
 e-contas/protected/runtime/*
-.metadata/.plugins/org.eclipse.core.resources/.history/*
+.metadata/.plugins/*
+.metadata/.log
